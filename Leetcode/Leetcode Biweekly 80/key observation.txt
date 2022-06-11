@@ -1,17 +1,34 @@
 question 1:
 It was a simple brute force, the only observation was that if a character is not an alphabet or a digit ,it would be a special character.
 
+******************************************************************************
+
 question 2:
 The brute force solution would yield a O(n^2) solution,so it had to be O(nlogn) approach.
 using the inbuilt search funtion which works in logn time when,calculated the minimum number
 in the potions  after which all of the potions can be selected to make a successful pair,thus iterating over all n values of spell yielded
 a nlogn solution.
 
+*******************************************************************************
 question 4:
+
 1.Couldn't solve it during contest due to edge cases failing
 2.observation->
     ->Using prefix sum ,we can calculate the desired sum of subarray in O(1)
     ->Using 2-pointers we try to take the first greatest subarray until the condition prod<k is true
     ->The total no. of subarrays in this region is j(j+1)/2, i.e 1 + 2 + ..j
-    ->After this we increment i -> i+1 and do above step again
-    
+        ->why?
+        because lets say total length of array is n;
+        first time you picked all single elements = n picks
+        second time you picked all double length elements = n-1 picks
+        third time = n-2 picks similarly ....so on ,hence
+
+        but here  we will maintain a  ( c + = length of current subarray)
+        why?
+          ->each time a new element is added ,it would introduce exactly the "new length" amount of
+          new subarrays in it.
+          for example -> lets say origninally ,the array length=3,
+          total contiguous subarray=6,
+          if we make the length 4,the amount of new subbarrays introduced is 4.making total as 10.
+
+    ->After this we increment i -> i+1 and do above step again until j<=length
