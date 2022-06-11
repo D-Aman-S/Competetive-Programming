@@ -6,3 +6,12 @@ The brute force solution would yield a O(n^2) solution,so it had to be O(nlogn) 
 using the inbuilt search funtion which works in logn time when,calculated the minimum number
 in the potions  after which all of the potions can be selected to make a successful pair,thus iterating over all n values of spell yielded
 a nlogn solution.
+
+question 4:
+1.Couldn't solve it during contest due to edge cases failing
+2.observation->
+    ->Using prefix sum ,we can calculate the desired sum of subarray in O(1)
+    ->Using 2-pointers we try to take the first greatest subarray until the condition prod<k is true
+    ->The total no. of subarrays in this region is j(j+1)/2, i.e 1 + 2 + ..j
+    ->After this we increment i -> i+1 and do above step again
+    
