@@ -1,0 +1,8 @@
+question 1:
+It was a simple brute force, the only observation was that if a character is not an alphabet or a digit ,it would be a special character.
+
+question 2:
+The brute force solution would yield a O(n^2) solution,so it had to be O(nlogn) approach.
+using the inbuilt search funtion which works in logn time when,calculated the minimum number
+in the potions  after which all of the potions can be selected to make a successful pair,thus iterating over all n values of spell yielded
+a nlogn solution.
